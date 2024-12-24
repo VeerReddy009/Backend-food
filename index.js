@@ -6,7 +6,7 @@ const firmRoutes=require('./routes/firmRoutes')
 const vendorRoutes=require('./routes/vendorRoutes')
 const mongoose=require('mongoose')
 const productRoutes=require('./routes/productRoutes')
-const PORT=4000
+const PORT=process.env.PORT||4000
 dotEnv.config()
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
